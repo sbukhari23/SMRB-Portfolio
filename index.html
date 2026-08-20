@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syed Muneeb Ur Rehman Bukhari - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="#home">Muneeb Ur Rehman</a></div>
+            <button type="button" class="menu-toggle" id="mobile-menu" aria-label="Open navigation"
+                aria-controls="nav-links" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#learning">Learning</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="home-header">
+            <h1>Hi, I'm <span class="highlight">Muneeb Ur Rehman</span></h1>
+            <p class="subtitle"><span>Software Engineering Student</span><span>Human-Centered Design</span><span>Web
+                    Developer</span><span>Graphic Designer</span><span>Content Writer</span></p>
+        </div>
+
+        <div class="content">
+            <div class="text-content">
+                <h2>SUMMARY</h2>
+                <p>Software Engineering student and web developer working across HTML, CSS, JavaScript, React, Node.js,
+                    Express.js, MongoDB, and SQLite. Built a full-stack <b>Asset Management System</b> now in active use by a
+                    client. Founded Peer Support Hub, and developed an <b>MVP</b> for a habit-building and accountability platform shaped
+                    by a survey of <b>100+ university students</b>, currently postponed. Four years of experience spanning
+                    design, content, and digital work, with a solid grip on responsive development, UI/UX, REST APIs,
+                    databases, and Git. Freelancing on <b>Upwork</b>, where the first contract landed within 15 days of
+                    joining. Particular interest in AI, human-centered design, and educational technology as areas for
+                    continued growth.
+                </p>
+            </div>
+
+            <div class="home-aside">
+                <img src="images/muneeb.jpeg" alt="Muneeb Bukhari" class="profile-pic">
+                <div class="image-caption">Syed Muneeb Ur Rehman Bukhari<br>Software Engineering<br>NUST SEECS,
+                    Islamabad</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <div class="section-header">
+            <p class="eyebrow">Academic foundation</p>
+            <h2>My <span class="highlight">Education</span></h2>
+            <p>Bachelor of Science in Software Engineering.</p>
+        </div>
+
+        <div class="education-grid">
+            <article class="education-card">
+                <div class="education-heading">
+                    <img src="images/nust_logo.png" alt="NUST logo" class="org-logo org-logo--education">
+                    <div>
+                        <p class="eyebrow">2023 - Present</p>
+                        <h3>National University of Sciences and Technology (NUST)</h3>
+                        <p class="degree">Bachelor of Science in Software Engineering - School of Electrical Engineering
+                            and Computer Science (SEECS), H-12, Islamabad</p>
+                    </div>
+                </div>
+                <div class="coursework">
+                    <h4>Relevant Coursework</h4>
+                    <p>Data Structures & Algorithms, Object-Oriented Programming, Database Systems, Web Engineering,
+                        Software Engineering, Human Computer Interaction, Entrepreneurship, Introduction to Management.
+                    </p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="section-header">
+            <h2>My <span class="highlight">Projects</span></h2>
+            <p>Software built to turn practical requirements into working solutions.</p>
+        </div>
+
+        <div class="projects-grid">
+
+            <!-- Peer Support Hub -->
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon" aria-hidden="true"><i data-lucide="handshake"></i></div>
+                    <div class="project-date">2024 - 2025 (Postponed)</div>
+                </div>
+                <p class="eyebrow">Founder</p>
+                <h3>Peer Support Hub - Habit-Building & Accountability Platform</h3>
+                <p>Early-stage wellbeing platform for habit formation, accountability, peer support, and collaborative
+                    growth, informed by behavioral design principles.</p>
+                <p>Conducted a survey of 100+ university students to define core MVP features and validate the concept.
+                </p>
+                <p>Built the initial MVP to bring the concept to life.</p>
+                <div class="tech-tags"><span class="tech-tag">MongoDB</span><span
+                        class="tech-tag">Express.js</span><span class="tech-tag">React</span><span
+                        class="tech-tag">Node.js</span><span class="tech-tag">Socket.IO</span></div>
+                <a href="https://github.com/sbukhari23/PeerSupportHub" class="btn" target="_blank"
+                    rel="noopener noreferrer">View Code</a>
+                <a href="#peer-support-demo" class="btn">Watch Demo</a>
+            </div>
+
+            <!-- EduConnect -->
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon" aria-hidden="true"><i data-lucide="graduation-cap"></i></div>
+                    <div class="project-date">Ongoing</div>
+                </div>
+                <p class="eyebrow">Final Year Design Project</p>
+                <h3>EduConnect - Collaborative Learning & Tutor Marketplace Platform</h3>
+                <p>Developing an EdTech platform integrating peer learning, collaborative study groups, and a verified
+                    tutor marketplace.</p>
+                <p>Designing features for academic discussion, tutoring, real-time communication, student engagement,
+                    and collaborative learning.</p>
+                <div class="tech-tags">
+                    <p class="tech-stack-note"><em><b>Planned Tech Stack (subject to change as the project
+                                develops):</em></b></p>
+                    <span class="tech-tag">React.js</span><span class="tech-tag">Tailwind CSS</span><span
+                        class="tech-tag">Node.js</span><span class="tech-tag">Express.js</span><span
+                        class="tech-tag">PostgreSQL</span><span class="tech-tag">JWT</span><span
+                        class="tech-tag">Socket.IO</span><span class="tech-tag">Git & GitHub</span><span
+                        class="tech-tag">Jitsi/WebRTC</span><span class="tech-tag">Cloudinary / AWS S3</span>
+                </div>
+            </div>
+
+            <!-- Asset Management System -->
+            <article class="project-card project-card-featured">
+                <div class="project-header">
+                    <div class="project-icon" aria-hidden="true"><i data-lucide="boxes"></i></div>
+                    <div class="project-date">Feb 2026 - Jul 2026</div>
+                </div>
+                <p class="eyebrow">Electron + React + Express + SQLite</p>
+                <h3>Asset Management System</h3>
+                <p>Custom-built and currently in active use by a client to manage plant and quarry operations, including
+                    equipment, employees, production, expenses, and partner profit sharing.</p>
+                <p>Designed a layered architecture using RESTful APIs and persistent local data storage.</p>
+                <p>Built production tracking, monthly/yearly expense reporting, stock valuation, and automated
+                    profit-sharing workflows.</p>
+                <div class="tech-tags"><span class="tech-tag">Electron</span><span class="tech-tag">React</span><span
+                        class="tech-tag">Express.js</span><span class="tech-tag">SQLite</span></div>
+                <a href="https://github.com/faisaliqbalkhattak/asset-management-system" class="btn" target="_blank"
+                    rel="noopener noreferrer">View
+                    Code</a> <a href="#asset-management-demo" class="btn">Watch Demo</a>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- Demo Videos -->
+    <section id="demos" class="demo-section">
+        <div class="section-header">
+            <p class="eyebrow">In action</p>
+            <h2>Project <span class="highlight">Demos</span></h2>
+        </div>
+
+        <div id="peer-support-demo" class="demo-card">
+            <div class="demo-device" aria-label="Peer Support Hub demo video shown inside a frame">
+                <div class="video-stage">
+                    <video class="demo-video" src="videos/peer-support-hub.mp4" controls muted loop playsinline
+                        preload="metadata" aria-label="Peer Support Hub demo video"></video>
+                </div>
+            </div>
+            <p class="demo-description">Peer Support Hub - Habit-Building & Accountability Platform demo.</p>
+        </div>
+
+        <div id="asset-management-demo" class="demo-card">
+            <div class="demo-device" aria-label="Asset Management System demo video shown inside a frame">
+                <div class="video-stage">
+                    <video class="demo-video" src="videos/asset-management-system.mp4" controls muted loop playsinline
+                        preload="metadata" aria-label="Asset Management System demo video"></video>
+                </div>
+            </div>
+            <p class="demo-description">Asset Management System demo.</p>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements">
+        <div class="section-header">
+            <h2><span class="highlight">Achievements</span></h2>
+        </div>
+
+        <div class="experience-grid">
+            <article class="experience-card">
+                <div class="card-kicker"><i data-lucide="trophy" aria-hidden="true"></i><span>Contest Win</span></div>
+                <h3>S3C Student Journey Design Contest</h3>
+                <p>Led a team of 4 to win the Student Support Services Centre, Student Journey Design Contest, NUST,
+                    Islamabad.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- Research Interests Section -->
+    <section id="research">
+        <div class="section-header">
+            <h2>Research <span class="highlight">Interests</span></h2>
+        </div>
+
+        <div class="tech-tags research-tags">
+            <span class="tech-tag">UI/UX DESIGN</span>
+            <span class="tech-tag">HUMAN-CENTERED AI</span>
+            <span class="tech-tag">EDUCATIONAL TECHNOLOGY</span>
+            <span class="tech-tag">BEHAVIORAL CHANGE</span>
+            <span class="tech-tag">AI-ASSISTED LEARNING</span>
+            <span class="tech-tag">PERSONALIZED SYSTEMS</span>
+            <span class="tech-tag">DIGITAL WELLBEING</span>
+            <span class="tech-tag">INTERACTIVE SYSTEMS</span>
+            <span class="tech-tag">RESPONSIBLE AI</span>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="section-header">
+            <p class="eyebrow">Recent work</p>
+            <h2>Work <span class="highlight">Experience</span></h2>
+        </div>
+
+        <div class="experience-grid">
+            <article class="experience-card experience-card-featured">
+                <div class="card-kicker"><img src="images/upwork_logo.jpg" alt="Upwork logo" class="org-logo"><span>Web Development
+                        Freelancer</span><span class="card-year">Ongoing</span></div>
+                <h3>Upwork</h3>
+                <p class="degree">Remote</p>
+                <p>Delivering web development projects for clients on Upwork; secured first contract within 15 days of
+                    launching the account.</p>
+                <a href="https://www.upwork.com/freelancers/~019d0bc35d72ab06a2" class="btn" target="_blank"
+                    rel="noopener noreferrer">View Upwork Profile</a>
+            </article>
+
+            <article class="experience-card">
+                <div class="card-kicker"><img src="images/fiverr_logo.jpg" alt="Fiverr logo" class="org-logo"><span>Graphic Design
+                    Freelancer</span><span class="card-year">Discontinued</span></div>
+                <h3>Fiverr</h3>
+                <p class="degree">Remote</p>
+                <p>Freelanced briefly in graphic design on Fiverr; no longer active on the platform.</p>
+            </article>
+
+            <article class="experience-card">
+                <div class="card-kicker"><img src="images/bookcoverhub_logo.jpg" alt="Book Cover Hub logo"
+                    class="org-logo"><span>Graphic Designer</span><span class="card-year">March 2025 - February 2026</span>
+                </div>
+                <h3>Book Cover Hub</h3>
+                <p class="degree">Remote</p>
+                <p>Designed 300+ brand-aligned visuals for monthly articles, maintaining visual consistency and matching
+                    each design to the article's tone and topic.</p>
+            </article>
+
+            <article class="experience-card">
+                <div class="card-kicker"><img src="images/bayyinah_logo.jpg" alt="Bayyinah Institute logo"
+                    class="org-logo"><span>Marketing Intern</span><span class="card-year">July 2025 - Present</span>
+                </div>
+                <h3>Bayyinah Institute</h3>
+                <p class="degree">Remote</p>
+                <p>Assisted with brand strategy, content writing, and visual design for Quran-centered campaigns,
+                    including platform-specific copy and content calendars.</p>
+            </article>
+
+            <article class="experience-card">
+                <div class="card-kicker"><img src="images/ncbs_logo.jpg" alt="NUST Character Building Society logo"
+                    class="org-logo"><span>Marketing Executive</span><span class="card-year">December 2024 - June
+                    2025</span></div>
+                <h3>NUST Character Building Society</h3>
+                <p class="degree">Now NUST Social Values Society, Islamabad</p>
+                <p>Executed event promotions and motivational campaigns for a university-wide audience, coordinating
+                    with administration, security, and sponsorship teams.</p>
+            </article>
+
+            <article class="experience-card">
+                <div class="card-kicker"><img src="images/ibn_e_aadam_logo.jpg" alt="Ibn e Aadam logo"
+                    class="org-logo"><span>Newsletter Lead</span><span class="card-year">November 2024 - February
+                    2025</span></div>
+                <h3>Ibn e Aadam</h3>
+                <p class="degree">Remote</p>
+                <p>Researched, wrote, and published 22 editions of a weekly email newsletter on character building,
+                    emotional wellbeing, and reflective writing.</p>
+            </article>
+
+            <article class="experience-card">
+                <div class="card-kicker"><img src="images/alkhidmat_foundation_pakistan_logo.jpg"
+                    alt="Alkhidmat Foundation Pakistan logo" class="org-logo"><span>Summer Intern</span><span
+                    class="card-year">Summer 2025</span></div>
+                <h3>Alkhidmat Foundation Pakistan</h3>
+                <p class="degree">Remote</p>
+                <p>Contributed to social media campaigns and influencer outreach for Youth Digital Summit 2025;
+                    researched organizational impact across healthcare, education, and disaster relief.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="section-header">
+            <p class="eyebrow">Technical toolkit</p>
+            <h2>My <span class="highlight">Skills</span></h2>
+        </div>
+
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3>Technical</h3>
+                <ul class="skill-list">
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                            alt="HTML" class="skill-icon">HTML</li>
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS"
+                            class="skill-icon">CSS</li>
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                            alt="JavaScript" class="skill-icon">JavaScript</li>
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                            alt="React" class="skill-icon">React</li>
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+                            alt="Next.js" class="skill-icon">Next.js</li>
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                            alt="Node.js" class="skill-icon">Node.js</li>
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+                            alt="Express.js" class="skill-icon">Express.js</li>
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                            alt="MongoDB" class="skill-icon">MongoDB</li>
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original-wordmark.svg"
+                            alt="Socket.IO" class="skill-icon">Socket.IO</li>
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
+                            alt="C++" class="skill-icon">C++</li>
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java"
+                            class="skill-icon">Java</li>
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                            alt="Python" class="skill-icon">Python</li>
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                            alt="MySQL" class="skill-icon">MySQL</li>
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                            alt="Git/GitHub" class="skill-icon">Git/GitHub</li>
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h3>Languages</h3>
+                <ul class="skill-list">
+                    <li><span class="skill-icon lang-symbol" aria-hidden="true"
+                            style="width:auto;height:auto;display:inline-block;font-size:0.85rem;font-weight:700;line-height:1;">Aa</span>English
+                        (Proficient)</li>
+                    <li><span class="skill-icon lang-symbol" lang="ur" aria-hidden="true"
+                            style="width:auto;height:auto;display:inline-block;font-size:0.95rem;font-weight:700;line-height:1;">اردو</span>Urdu
+                        (Native)</li>
+                    <li><span class="skill-icon lang-symbol" lang="ar" aria-hidden="true"
+                            style="width:auto;height:auto;display:inline-block;font-size:0.95rem;font-weight:700;line-height:1;">عربي</span>Arabic
+                        (Beginner)</li>
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h3>UX & Product</h3>
+                <ul class="skill-list">
+                    <li><i data-lucide="layout-template" class="skill-icon" aria-hidden="true"></i>UI/UX Design
+                        Principles</li>
+                    <li><i data-lucide="users" class="skill-icon" aria-hidden="true"></i>User Research</li>
+                    <li><i data-lucide="heart-handshake" class="skill-icon" aria-hidden="true"></i>Human-Centered Design
+                    </li>
+                    <li><i data-lucide="brain" class="skill-icon" aria-hidden="true"></i>Behavioral Design</li>
+                    <li><i data-lucide="layers" class="skill-icon" aria-hidden="true"></i>Prototyping</li>
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h3>Design & Content</h3>
+                <ul class="skill-list">
+                    <li><i data-lucide="palette" class="skill-icon" aria-hidden="true"></i>Graphic Design (Photoshop,
+                        Illustrator, Canva)</li>
+                    <li><i data-lucide="pen-line" class="skill-icon" aria-hidden="true"></i>Content Writing</li>
+                    <li><i data-lucide="share-2" class="skill-icon" aria-hidden="true"></i>Social Media Design</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Independent Learning Section -->
+    <section id="learning">
+        <div class="section-header">
+            <p class="eyebrow">Self-directed study</p>
+            <h2>Independent <span class="highlight">Learning</span></h2>
+        </div>
+
+        <div class="education-grid">
+            <article class="education-card">
+                <div class="education-heading">
+                    <div class="book-cover" aria-hidden="true" data-cover-src="images/hooked.jpg"
+                        data-cover-alt="Cover of Hooked: How to Build Habit-Forming Products">
+                        <i data-lucide="book-open" class="book-cover-fallback" aria-hidden="true"></i>
+                    </div>
+                    <div class="education-copy">
+                        <h3><em>Hooked: How to Build Habit-Forming Products</em></h3>
+                        <p class="degree">by Nir Eyal</p>
+                    </div>
+                </div>
+                <div class="coursework">
+                    <p>Studied behavioral design and habit-forming product principles, with particular interest in user
+                        engagement and behavior change.</p>
+                </div>
+            </article>
+
+            <article class="education-card">
+                <div class="education-heading">
+                    <div class="book-cover" aria-hidden="true" data-cover-src="images/the-lean-startup.jpg"
+                        data-cover-alt="Cover of The Lean Startup">
+                        <i data-lucide="book-open" class="book-cover-fallback" aria-hidden="true"></i>
+                    </div>
+                    <div class="education-copy">
+                        <h3><em>The Lean Startup</em></h3>
+                        <p class="degree">by Eric Ries</p>
+                    </div>
+                </div>
+                <div class="coursework">
+                    <p>Studied startup methodologies and iterative product development, with particular interest in
+                        experimentation, validation, and user-focused product improvement.</p>
+                </div>
+            </article>
+
+            <article class="education-card">
+                <div class="education-heading">
+                    <div class="book-cover" aria-hidden="true" data-cover-src="images/a-little-history-of-the-world.jpg"
+                        data-cover-alt="Cover of A Little History of the World">
+                        <i data-lucide="book-open" class="book-cover-fallback" aria-hidden="true"></i>
+                    </div>
+                    <div class="education-copy">
+                        <h3><em>A Little History of the World</em></h3>
+                        <p class="degree">by E.H. Gombrich</p>
+                    </div>
+                </div>
+                <div class="coursework">
+                    <p>Studied historical development and societal change, with particular interest in how societies,
+                        cultures, and institutions evolve over time - relevant to cultural heritage and memory-focused
+                        digital projects.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications">
+        <div class="section-header">
+            <p class="eyebrow">Credentials</p>
+            <h2><span class="highlight">Certifications</span></h2>
+        </div>
+
+        <div class="experience-grid">
+            <article class="experience-card cert-card">
+                <div class="card-kicker cert-kicker">
+                <span class="cert-badge cert-platform"><img src="images/udemy_logo.png" alt="Udemy logo"
+                    class="cert-logo cert-logo--udemy">Udemy</span>
+                <span class="cert-badge cert-source"><img src="images/academind_logo.jpg" alt="Academind logo"
+                    class="cert-logo"><span>Academind</span></span>
+                </div>
+                <h3>React - The Complete Guide (incl. Next.js, Redux)</h3>
+                <p class="degree">Academind by Maximilian Schwarzmuller</p>
+                <p>Comprehensive course covering React, Hooks, Context API, Redux, React Router, Next.js 14+, and
+                    fullstack application development.</p>
+            </article>
+
+            <article class="experience-card cert-card">
+                <div class="card-kicker cert-kicker">
+                <span class="cert-badge cert-platform"><img src="images/coursera_logo.png" alt="Coursera logo"
+                    class="cert-logo">Coursera</span>
+                <span class="cert-badge cert-source"><img src="images/john_hopkins_logo.jpg"
+                    alt="Johns Hopkins University logo" class="cert-logo"><span>Johns Hopkins University</span></span>
+                </div>
+                <h3>HTML, CSS, and JavaScript for Web Developers</h3>
+                <p class="degree">Johns Hopkins University</p>
+                <p>Foundation in front-end web development, responsive design, AJAX, and WCAG accessibility.</p>
+                <a href="https://www.coursera.org/account/accomplishments/verify/03LU769JBI8W" class="btn"
+                    target="_blank" rel="noopener noreferrer">Show Credential</a>
+            </article>
+
+            <article class="experience-card cert-card">
+                <div class="card-kicker cert-kicker">
+                    <span class="cert-badge cert-platform"><img src="images/coursera_logo.png" alt="Coursera logo"
+                        class="cert-logo">Coursera</span>
+                    <span class="cert-badge cert-source"><img src="images/google_logo.jpg" alt="Google logo"
+                        class="cert-logo"><span>Google</span></span>
+                </div>
+                <h3>Google AI</h3>
+                <p class="degree">Google</p>
+                <p>Professional Certificate covering AI application across brainstorming, research, communication,
+                    content creation, data analysis, and coding; includes a portfolio of 20+ AI-built artifacts and
+                    effective prompting/evaluation practices.</p>
+                <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/58A2S3NFFVEJ"
+                    class="btn" target="_blank" rel="noopener noreferrer">Show Credential</a>
+            </article>
+
+            <article class="experience-card cert-card">
+                <div class="card-kicker cert-kicker">
+                    <span class="cert-badge cert-platform"><img src="images/coursera_logo.png" alt="Coursera logo"
+                        class="cert-logo">Coursera</span>
+                    <span class="cert-badge cert-source"><img src="images/deeplearning_ai_logo.jpg"
+                        alt="DeepLearning.AI logo" class="cert-logo"><span>DeepLearning.AI</span></span>
+                </div>
+                <h3>AI for Everyone</h3>
+                <p class="degree">DeepLearning.AI</p>
+                <p>Foundational course on Artificial Intelligence, Machine Learning, Deep Learning, and Data Science,
+                    covering AI enablement, responsible AI, data ethics, and AI product strategy.</p>
+                <a href="https://www.coursera.org/account/accomplishments/verify/CQDY4NO7S9P7" class="btn"
+                    target="_blank" rel="noopener noreferrer">Show Credential</a>
+            </article>
+        </div>
+    </section>
+
+    <!-- Hobbies Section -->
+    <section id="hobbies">
+        <div class="section-header">
+            <h2><span class="highlight">Hobbies</span></h2>
+        </div>
+
+        <div class="tech-tags research-tags">
+            <span class="tech-tag"><i data-lucide="book" aria-hidden="true"></i> Book Reading</span>
+            <span class="tech-tag"><i data-lucide="pen-line" aria-hidden="true"></i> Journalling</span>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="section-header">
+            <h2><span class="highlight">Contact</span> Me</h2>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-card">
+                <div class="contact-info-col">
+                    <i data-lucide="mail" class="contact-icon" aria-hidden="true"></i>
+                    <h3>Email</h3>
+                </div>
+                <div class="contact-address-col">
+                    <a href="mailto:sbukhari.bese23seecs@seecs.edu.pk">sbukhari.bese23seecs@seecs.edu.pk</a>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-info-col">
+                    <i data-lucide="phone" class="contact-icon" aria-hidden="true"></i>
+                    <h3>Phone</h3>
+                </div>
+                <div class="contact-address-col">
+                    <a href="tel:+923407071444">+92 340 7071444</a>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-info-col">
+                    <i data-lucide="map-pin" class="contact-icon" aria-hidden="true"></i>
+                    <h3>Location</h3>
+                </div>
+                <div class="contact-address-col">
+                    <span>Islamabad, Pakistan</span>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-info-col">
+                    <i data-lucide="github" class="contact-icon" aria-hidden="true"></i>
+                    <h3>GitHub</h3>
+                </div>
+                <div class="contact-address-col">
+                    <a href="https://github.com/sbukhari23" target="_blank"
+                        rel="noopener noreferrer">github.com/sbukhari23</a>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-info-col">
+                    <i data-lucide="linkedin" class="contact-icon" aria-hidden="true"></i>
+                    <h3>LinkedIn</h3>
+                </div>
+                <div class="contact-address-col">
+                    <a href="https://www.linkedin.com/in/muneeburrehmanb/" target="_blank"
+                        rel="noopener noreferrer">linkedin.com/in/muneeburrehmanb</a>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-info-col">
+                    <i data-lucide="briefcase" class="contact-icon" aria-hidden="true"></i>
+                    <h3>Upwork</h3>
+                </div>
+                <div class="contact-address-col">
+                    <a href="https://www.upwork.com/freelancers/~019d0bc35d72ab06a2" target="_blank"
+                        rel="noopener noreferrer">upwork.com/freelancers/~019d0bc35d72ab06a2</a>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-info-col">
+                    <i data-lucide="folder-open" class="contact-icon" aria-hidden="true"></i>
+                    <h3>Portfolio</h3>
+                </div>
+                <div class="contact-address-col">
+                    <a href="https://tinyurl.com/3xz45hnh" target="_blank"
+                        rel="noopener noreferrer">tinyurl.com/3xz45hnh</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>Designed and developed by <span class="highlight">Muneeb Ur Rehman</span> - 2026</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
