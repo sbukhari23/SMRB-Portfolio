@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1200px;
+    height: 630px;
+    background-color: #F3F0E9;
+    background-image: radial-gradient(#D8D2C4 1px, transparent 1px);
+    background-size: 24px 24px;
+    font-family: Inter, system-ui, sans-serif;
+    color: #16181A;
+    position: relative;
+    overflow: hidden;
+  }
+  .frame {
+    position: absolute;
+    left: 64px; top: 64px; right: 64px; bottom: 64px;
+    border: 1.5px solid #0F6B4F;
+    background: rgba(255,255,255,0.35);
+  }
+  .corner { position: absolute; width: 10px; height: 10px; background: #F3F0E9; border: 1.5px solid #0F6B4F; }
+  .content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    text-align: center;
+  }
+  .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16px;
+    letter-spacing: 0.04em;
+    color: #0F6B4F;
+    font-weight: 500;
+  }
+  h1 {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-weight: 400;
+    font-size: 96px;
+    line-height: 0.96;
+    letter-spacing: -0.01em;
+  }
+  .tagline {
+    font-size: 24px;
+    color: #4E4940;
+    max-width: 640px;
+  }
+  .sticky {
+    position: absolute;
+    width: 150px;
+    min-height: 90px;
+    padding: 14px;
+    box-sizing: border-box;
+    font-size: 17px;
+    line-height: 1.3;
+    box-shadow: 0 16px 32px rgba(60,45,10,0.14);
+  }
+</style>
+</head>
+<body>
+  <div class="sticky" style="left: 104px; top: 128px; background:#F3E39A; color:#4A3F12; transform: rotate(-6deg)">design, then build</div>
+  <div class="sticky" style="right: 100px; bottom: 150px; background:#CFE0EE; color:#1C3650; transform: rotate(5deg)">MERN · Next.js</div>
+  <div class="frame">
+    <div class="corner" style="left:-5px; top:-5px"></div>
+    <div class="corner" style="right:-5px; top:-5px"></div>
+    <div class="corner" style="left:-5px; bottom:-5px"></div>
+    <div class="corner" style="right:-5px; bottom:-5px"></div>
+  </div>
+  <div class="content">
+    <span class="eyebrow"># portfolio.tsx</span>
+    <h1>Muneeb Ur Rehman</h1>
+    <span class="tagline">Full-stack MERN developer and Software Engineering student at NUST. I design it, then I build it.</span>
+  </div>
+</body>
+</html>

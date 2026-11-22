@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Surfaces */
+  --color-paper: #f3f0e9;
+  --color-surface: #fbfaf6;
+  --color-white: #ffffff;
+
+  /* Text */
+  --color-ink: #16181a;
+  --color-ink-2: #4e4940;
+  --color-muted: #6b655a;
+
+  /* Lines and grid */
+  --color-line: #ddd7cb;
+  --color-line-soft: #e3ddd0;
+  --color-dot: #d8d2c4;
+
+  /* Accent */
+  --color-emerald: #0f6b4f;
+  --color-emerald-dark: #0a4f3a;
+  --color-emerald-tint: #dcebe3;
+
+  /* Sticky notes */
+  --color-sticky-yellow: #f3e39a;
+  --color-sticky-yellow-ink: #4a3f12;
+  --color-sticky-mint: #cfe6d4;
+  --color-sticky-mint-ink: #1f4a35;
+  --color-sticky-sky: #cfe0ee;
+  --color-sticky-sky-ink: #23415e;
+  --color-sticky-rose: #f2d3cf;
+  --color-sticky-rose-ink: #7a4a43;
+
+  /* Dev-only TODO chip (never ships with content visible) */
+  --color-placeholder-chip: #fbefd2;
+  --color-placeholder-chip-ink: #6a4b05;
+
+  /* Code card token colours. Comment and line-number reuse --color-muted:
+     REDESIGN_PLAN.md's #8A8478 / #A39C8E read at 3.55:1 / 2.61:1 against
+     --color-surface, both under the CLAUDE.md-mandated 4.5:1 (caught by
+     an @axe-core/playwright pass of /styleguide in Phase 3). */
+  --color-code-keyword: #0f6b4f;
+  --color-code-tag: #a0522d;
+  --color-code-string: #2f5d8a;
+  --color-code-comment: #6b655a;
+  --color-code-line-number: #6b655a;
+
+  /* Fonts */
+  --font-serif: var(--font-serif);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+
+  /* LiveCursor idle drift (ANIMATION_SPEC.md §2.6). Transform only, and
+     Tailwind's motion-safe: variant keeps it off under reduced motion. */
+  --animate-live-cursor-drift: live-cursor-drift 3s ease-in-out infinite;
+}
+
+@keyframes live-cursor-drift {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(2px, -2px);
+  }
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+}

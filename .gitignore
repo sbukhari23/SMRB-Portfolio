@@ -1,0 +1,46 @@
+# --- Planning files: kept local on purpose (Muneeb's choice) ---
+# docs/redesign/ holds: plan, profile, specs, handoff, mockups/, design-source/,
+# reference/ (inspiration video), assets-inbox/. None of it may be committed.
+/docs/redesign/
+/CLAUDE.md
+/.claude/settings.local.json
+
+# --- Dependencies ---
+/node_modules
+/.pnp
+.pnp.*
+
+# --- Next.js build output ---
+/.next/
+/out/
+next-env.d.ts
+*.tsbuildinfo
+
+# --- Testing ---
+/coverage
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/.preview-root/
+
+# --- Environment and secrets ---
+.env
+.env*.local
+
+# --- Logs ---
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# --- OS and editor clutter ---
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# --- Original large media kept out of the shipped site ---
+/media-originals/
