@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import Image from "next/image";
 import { SelectionFrame } from "@/components/ui/SelectionFrame";
 import { CodeCard } from "@/components/ui/CodeCard";
 import { withBase } from "@/lib/withBase";
@@ -8,10 +9,15 @@ import type { Frame as FrameData, FrameCard as FrameCardData } from "@/content/c
 
 // Chapters whose "image" frame already has a real demo video (the only
 // two projects with footage in public/videos/ so far). Everything else
-// without real art renders a dev-only TODO placeholder.
-const CHAPTER_VIDEO: Record<string, string> = {
-  "built-for-a-quarry": "/videos/asset-management-system.mp4",
-  "habits-together": "/videos/peer-support-hub.mp4",
+// without real art renders a dev-only TODO placeholder. `poster` is an
+// optional still frame shown at rest, before the hover-to-play kicks in
+// (extracted from the same video via scripts/extract-poster-frame.js).
+const CHAPTER_VIDEO: Record<string, { src: string; poster?: string }> = {
+  "built-for-a-quarry": {
+    src: "/videos/asset-management-system.mp4",
+    poster: "/images/asset-management-system-poster.jpg",
+  },
+  "habits-together": { src: "/videos/peer-support-hub.mp4" },
 };
 
 export function Frame({
@@ -31,9 +37,11 @@ export function Frame({
   if (frame.type === "code") {
     body = <CodeCard filename={filename} lines={frame.code ?? []} className="h-full border-0 shadow-none" />;
   } else if (frame.type === "image" && CHAPTER_VIDEO[chapterId]) {
-    body = <HoverVideo src={CHAPTER_VIDEO[chapterId]} />;
+    body = <HoverVideo {...CHAPTER_VIDEO[chapterId]} />;
+  } else if (frame.type === "image" && frame.images?.[0]) {
+    body = <StaticImage src={frame.images[0]} alt={filename} />;
   } else if (frame.type === "grid") {
-    body = <GridPlaceholder todo={frame.todo} />;
+    body = frame.images ? <ImageGrid images={frame.images} /> : <GridPlaceholder todo={frame.todo} />;
   } else if (frame.type === "card" && frame.card) {
     body = <FrameCardView card={frame.card} />;
   } else {
@@ -53,20 +61,21 @@ export function Frame({
   );
 }
 
-function HoverVideo({ src }: { src: string }) {
+function HoverVideo({ src, poster }: { src: string; poster?: string }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [loaded, setLoaded] = useState(false);
   return (
     <div className="relative h-full w-full">
-      {/* preload="none" leaves no poster frame to show before the first
-          hover triggers a fetch, so a skeleton stands in until the video's
-          first frame actually decodes (onLoadedData), per REDESIGN_PLAN.md
-          Phase 7's "loading skeletons for video posters". */}
-      {!loaded && <VideoSkeleton />}
+      {/* preload="none" leaves no frame to show before the first hover
+          triggers a fetch, so without a `poster` a skeleton stands in until
+          the video's first frame actually decodes (onLoadedData), per
+          REDESIGN_PLAN.md Phase 7's "loading skeletons for video posters". */}
+      {!loaded && !poster && <VideoSkeleton />}
       <video
         ref={videoRef}
         className="h-full w-full object-cover"
         src={withBase(src)}
+        poster={poster ? withBase(poster) : undefined}
         muted
         loop
         playsInline
@@ -116,6 +125,26 @@ function Placeholder({ label, todo }: { label: string; todo?: string }) {
           {todo}
         </span>
       )}
+    </div>
+  );
+}
+
+function StaticImage({ src, alt }: { src: string; alt: string }) {
+  return (
+    <div className="relative h-full w-full">
+      <Image src={withBase(src)} alt={alt} fill sizes="700px" className="object-cover" />
+    </div>
+  );
+}
+
+function ImageGrid({ images }: { images: string[] }) {
+  return (
+    <div className="grid h-full w-full grid-cols-3 gap-1 bg-surface p-1">
+      {images.map((src) => (
+        <div key={src} className="relative overflow-hidden bg-line-soft">
+          <Image src={withBase(src)} alt="" fill sizes="160px" className="object-cover" />
+        </div>
+      ))}
     </div>
   );
 }

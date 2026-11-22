@@ -41,6 +41,8 @@ export type Frame = {
   rect: { w: number; h: number } | null;
   code?: string[];
   card?: FrameCard;
+  /** For type: "grid" once real visuals exist (public/images/<name>.webp paths). */
+  images?: string[];
   todo?: string;
 };
 
@@ -125,7 +127,7 @@ export const chapters: Chapter[] = [
       type: "grid",
       label: "# work-samples/",
       rect: { w: 380, h: 380 },
-      todo: "supply 6 to 9 publishable visuals; until then render labelled placeholders",
+      images: Array.from({ length: 9 }, (_, i) => `/images/work-samples/${i + 1}.webp`),
     },
     stickies: [],
     camera: { x: 1800, y: 550, scale: 0.9 },
@@ -187,7 +189,6 @@ export const chapters: Chapter[] = [
         '  status="in daily use"',
         "/>",
       ],
-      todo: "replace the app mock with a real poster frame from the demo video once available; play muted demo on hover",
     },
     stickies: [
       { text: "who gets which share?", layer: "front" },
@@ -290,7 +291,7 @@ export const chapters: Chapter[] = [
       type: "image",
       label: "# FaisalMasjid.unity",
       rect: { w: 700, h: 394 },
-      todo: "screenshots or clips from the Unity labs",
+      images: ["/images/worlds-in-unity.webp"],
     },
     stickies: [],
     camera: { x: 700, y: 1800, scale: 0.8 },
